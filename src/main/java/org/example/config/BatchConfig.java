@@ -16,6 +16,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
 
+import java.io.File;
+
 @Configuration
 @EnableBatchProcessing
 public class BatchConfig {
@@ -58,7 +60,7 @@ public class BatchConfig {
         FlatFileItemReader<IceCream> reader = new FlatFileItemReader<IceCream>();
 
         //Set input file location
-        reader.setResource(new FileSystemResource("input/IceCreamSales.csv"));
+        reader.setResource(new FileSystemResource(new File("input/IceCreamSales.csv")));
 
         //Set number of lines to skips. Use it if file has header rows.
         reader.setLinesToSkip(1);

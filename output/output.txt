@@ -1,0 +1,3 @@
+IceCream{flavour='butterscoth', price='200', amount='1000'}
+IceCream{flavour='strawberry', price='340', amount='2000'}
+IceCream{flavour='lime', price='132', amount='6000'}
